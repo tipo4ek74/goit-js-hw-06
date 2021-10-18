@@ -29,7 +29,7 @@ const ingredients = [
 let ulList = document.getElementById("ingredients");
 const foodIngredients = ingredients.forEach(ingredient => {
   let items = document.createElement("li");
-  items.className.add("item");
+  items.className = 'item';
   items.innerHTML = ingredient;
   ulList.append(items);
 });

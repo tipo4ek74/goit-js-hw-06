@@ -36,9 +36,11 @@ function getRandomHexColor() {
 
 dataCreate.addEventListener('click', addDiv)
 
+let size = 20;
+
 function addDiv() {
   let i = 0;
-  let size = 20;
+  
   let param = +inputVal.value
   while (i < param) {
     i++;
@@ -53,6 +55,7 @@ function addDiv() {
 }
 
 dataDestroy.addEventListener('click', () => {
-  divList.innerHTML=''
+  divList.innerHTML = ''
+  size = 20;
 })
 

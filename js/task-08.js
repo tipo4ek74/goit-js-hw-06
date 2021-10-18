@@ -25,6 +25,11 @@ const form = document.querySelector(".login-form");
 
 form.addEventListener("submit", validationForm);
 
+let user = {
+  mail: "",
+  Password: ""
+}
+
 function validationForm(event) {
   event.preventDefault();
   const {
@@ -35,6 +40,9 @@ function validationForm(event) {
     alert("Please fill in all the fields!");
   }
 
-  console.log(`Login: ${email.value}, Password: ${password.value}`);
-  /* event.currentTarget.reset(); */
+  user.mail = email.value;
+  user.Password = password.value;
+
+  console.log(user);
+  event.currentTarget.reset();
 }
